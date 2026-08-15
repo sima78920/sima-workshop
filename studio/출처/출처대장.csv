@@ -1,2 +1,8 @@
 ID,유형,제목,링크·DOI,신뢰도,신뢰도근거,핵심발견,수집일,활용EP
-S001,억대뷰쇼츠,튀김 시간별 실험 먹방 (2.9억뷰),https://youtube.com/shorts/8hUj2Ofxw4U,상,2.9억뷰 실측 + video_analysis 장면 해부 완료,변수 단계 반복(1초→1시간) 구조가 완주율을 구조적으로 보장; 무언어+ASMR로 글로벌 확산,2026-08-15,
+S001,억대뷰쇼츠,튀김 시간별 실험 먹방 (2.9억뷰),https://youtube.com/shorts/8hUj2Ofxw4U,상,2.9억뷰 실측 + video_analysis 장면 해부 완료,변수 단계 반복(1초→1시간) 구조가 완주율을 구조적으로 보장; 무언어+ASMR로 글로벌 확산,2026-08-15,EP001
+S002,학술지,Understanding the Process of Freezing,https://extension.psu.edu/understanding-the-process-of-freezing,상,Penn State 공식 대학 Extension,급속 냉동=작은 얼음 결정 다수로 세포 손상 적음; 완만 냉동=큰 결정이 세포 손상 증가,2026-08-15,EP001
+S003,학술지,Freezing Basics,https://extension.missouri.edu/publications/gh1501,상,Univ. of Missouri 공식 대학 Extension,물이 얼며 팽창해 세포벽이 찢어지고 해동 후 과일이 물러짐,2026-08-15,EP001
+S004,학술지,Frozen Fruit overview,https://www.sciencedirect.com/topics/food-science/frozen-fruit,상,ScienceDirect 피어리뷰 논문 기반,얼음 결정이 세포 접착층(중간엽)을 분해; 해동 시 수분이 못 돌아와 드립 손실 발생,2026-08-15,EP001
+S005,학술지,Strawberry Anatomy,https://strawberry.calpoly.edu/news/test-your-strawberry-anatomy-skills-part-2,상,Cal Poly 딸기 전문 연구센터,딸기의 빨간 과육은 꽃받침 조직(receptacle)이 부푼 헛열매,2026-08-15,EP001
+S006,공식자료,Strawberry / Accessory fruit,https://en.wikipedia.org/wiki/Strawberry,중,위키피디아(식물학 분류 정의 — 교차 검증됨),겉의 노란 점(약 200개)이 수과(achene)라는 진짜 열매이며 각각 씨 1개 포함,2026-08-15,EP001
+S007,뉴스,냉동 과일 절단 ASMR 바이럴 트렌드,https://www.oreateai.com/blog/the-allure-of-asmr-fruit-cutting-a-slice-of-serenity/,중,트렌드 분석 + 틱톡 실사례 교차,유리질 냉동 딸기 절단 ASMR(AI 생성 포함)이 소셜에서 대중적 인기,2026-08-15,EP001
