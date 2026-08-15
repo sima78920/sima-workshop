@@ -33,7 +33,8 @@
 ## 자동화
 
 - 주간 트렌드 스캔 Routine: 매주 월 06:00 KST (일 21:00 UTC), fresh session, 결과 커밋·푸시 + 푸시 알림
-- Routine ID: `(등록 후 기록)`
+- Routine ID: `trig_01MSKiJV6skbFpWoxYmnVjZv` (2026-08-15 등록, 다음 실행 월 06:08 KST)
+- 주의: 루틴 세션에는 MCP 커넥터가 붙지 않아 tiktok_music_trending은 생략되고 WebSearch 기반으로 동작한다. 틱톡 음원 트렌드까지 자동화하려면 claude.ai 루틴 UI에서 커넥터를 붙여 재생성.
 
 ## 미르 로컬로 이관 (별도 루트 — mir-os-core와 분리)
 
