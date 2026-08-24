@@ -56,6 +56,37 @@
 | EBS 콘텐츠(한글이 야호 등) | 오픈데이터 아님. 별도 라이선스 계약 대상 |
 | 교과서(검정·인정) | 민간 출판사 저작물. 국가 교육과정과 별개로 저작권 있음 |
 
+## 3차 확장: 미국·유럽 선진 교육자료 → 한국 예비초등 프로그램으로 수입 (국내 사업)
+
+### 상업적 이용 가능이 라이선스로 확인된 해외 소스
+
+| 소스 | 내용 | 라이선스 | 상업/번역/재구성 |
+|---|---|---|---|
+| **Oak National Academy** (영국) | 영국 국가 커리큘럼 전체 수업자료·영상·퀴즈·트랜스크립트, 무료 API 제공 | OGL v3.0 (2022.9 이후 콘텐츠) | ✅ 상업 이용 명시 허용, 자사 제품 통합 가능 |
+| **EYFS Statutory Framework** (영국) | 0~5세 국가 조기교육 프레임워크 (Early Learning Goals 포함) | Crown copyright + OGL v3.0 | ✅ |
+| **Head Start ELOF** (미국 연방) | 출생~5세 학습성과 프레임워크 (5개 영역 발달 연속체) | 미 연방정부 저작물 = 퍼블릭 도메인 | ✅ 출처표시조차 불요 |
+| **Illustrative Mathematics K-5** (미국) | 정식 초등 수학 커리큘럼 전체 | CC BY 4.0 (⚠️ IM v.360은 CC BY-NC — 구버전 CC BY 자료만 사용) | ✅ 단 IM 이름·로고는 상표라 사용 불가 |
+| **EL Education K-5 Language Arts** (미국) | 정식 초등 영어(ELA) 커리큘럼 | CC BY 4.0 | ✅ |
+
+- OGL·CC BY 모두 **번역(파생물) + 상업 이용 허용**. 조건: 출처표시 + 변경 사실 명시.
+- 공통 예외: 각 자료 안의 제3자 저작물(사진·발췌문 등)은 라이선스 제외 — 걷어내고 써야 함.
+
+### 못 쓰는 유명 소스 (NC 함정)
+- Khan Academy (CC BY-NC-SA), CK-12 (자체 NC 라이선스), Eureka Math/EngageNY (CC BY-NC-SA), Core Knowledge (CC BY-NC-SA) → **유료 프로그램에 사용 불가**
+- 몬테소리·레지오 등 교육 "방법론" 자체는 저작권 대상이 아니라 자유지만, AMI/AMS 등 인증기관 상표·명칭 사용은 별개
+
+### 사업 구조
+1. 골격: 누리과정 + 2022 개정 교육과정 초1~2 성취기준 (저작권 無)
+2. 콘텐츠 원천: EYFS/ELOF 프레임워크 + Oak/IM/EL 수업자료 번역·재구성 (OGL/CC BY)
+3. **핵심 IP = 매핑표**: "EYFS Early Learning Goals ↔ 누리과정 ↔ 초1 성취기준" 크로스워크 — 이것이 남이 못 베끼는 자산
+4. 마케팅: "영국 국가 커리큘럼(EYFS) 기반" — 실제 OGL 자료 기반이므로 사실 표시로 성립. "국제 인증" 대신 이 문구를 쓸 것
+
+### 추가 근거
+- [Oak National Academy 라이선스 안내](https://www.thenational.academy/blog/open-innovation-licencing-and-access-to-our-new-resources) / [상업 이용 허용 보도](https://schoolsweek.co.uk/oak-national-academy-will-allow-commercial-use-of-its-lessons/)
+- [EYFS statutory framework (GOV.UK)](https://www.gov.uk/government/publications/early-years-foundation-stage-framework--2)
+- [Head Start ELOF](https://www.headstart.gov/school-readiness/article/head-start-early-learning-outcomes-framework)
+- [Illustrative Mathematics IP/라이선스](https://illustrativemathematics.org/site-ip-content/) / [Open Up Resources 라이선스 FAQ](https://www.openupresources.org/help-support/licensing-questions/)
+
 ## 실무 결론
 
 오픈데이터로 확보 가능한 것은 **① 커리큘럼 프레임(고시문 — 저작권 無) ② 행정·통계 데이터(KOGL 1유형)**이지, 완성된 교육 콘텐츠(교재·영상·워크시트)가 아니다. 해외 상업화 구조는:
