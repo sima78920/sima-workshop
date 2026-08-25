@@ -1,0 +1,470 @@
+<title>학교 갈 준비 5일</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+
+<style>
+:root{
+  --ground:#ffffff;
+  --surface:#f1f5f0;
+  --surface-2:#e6ede4;
+  --ink:#18241f;
+  --muted:#66766d;
+  --line:#d7e0d6;
+  --accent:#2e6a4e;
+  --accent-soft:#e3efe7;
+  --mark:#b8871c;
+  --mark-soft:#fbf1d8;
+  --shadow:rgba(24,36,31,.07);
+  --display:"Gowun Batang",Georgia,"Nanum Myeongjo",serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#131714; --surface:#1c221e; --surface-2:#242c27;
+    --ink:#e7ede8; --muted:#93a39a; --line:#2f3a34;
+    --accent:#63a882; --accent-soft:#1e2b24;
+    --mark:#e8b948; --mark-soft:#2a2417;
+    --shadow:rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#131714; --surface:#1c221e; --surface-2:#242c27;
+  --ink:#e7ede8; --muted:#93a39a; --line:#2f3a34;
+  --accent:#63a882; --accent-soft:#1e2b24;
+  --mark:#e8b948; --mark-soft:#2a2417;
+  --shadow:rgba(0,0,0,.4);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--body); font-size:17px; line-height:1.75;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:660px; margin:0 auto; padding:0 22px}
+h1,h2,h3{text-wrap:balance; margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2.5px solid var(--accent); outline-offset:3px; border-radius:3px}
+
+/* ---------- header ---------- */
+.masthead{padding:64px 0 40px; border-bottom:1px solid var(--line)}
+.kicker{
+  font-family:var(--mono); font-size:11.5px; font-weight:600;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--accent);
+  display:flex; align-items:center; gap:9px;
+}
+.kicker::after{content:""; flex:1; height:1px; background:var(--line)}
+h1{
+  font-family:var(--display); font-weight:700;
+  font-size:clamp(34px,8.5vw,50px); line-height:1.2;
+  margin:20px 0 0; letter-spacing:-.01em;
+}
+.dek{font-size:18px; color:var(--muted); margin:16px 0 0; max-width:34em}
+.basis{
+  margin-top:26px; padding:13px 16px; background:var(--surface);
+  border-left:3px solid var(--accent); border-radius:0 7px 7px 0;
+  font-size:14px; color:var(--muted); line-height:1.65;
+}
+.basis b{color:var(--ink); font-weight:600}
+
+/* ---------- 30일 레일 ---------- */
+.rail-block{padding:38px 0 34px; border-bottom:1px solid var(--line)}
+.rail{display:flex; gap:3px; align-items:flex-end; margin:0 0 14px; height:34px}
+.tick{flex:1; background:var(--line); border-radius:2px; height:11px}
+.tick.on{background:var(--accent); height:30px}
+.rail-legend{
+  display:flex; flex-wrap:wrap; gap:7px 18px; font-size:13px;
+  color:var(--muted); font-family:var(--mono); font-weight:500;
+}
+.rail-legend span{display:inline-flex; align-items:center; gap:6px}
+.dot{width:9px; height:9px; border-radius:2px; background:var(--accent)}
+.dot.off{background:var(--line)}
+
+/* ---------- 안내 ---------- */
+.note{padding:34px 0; border-bottom:1px solid var(--line)}
+.note h2{font-family:var(--display); font-size:24px; font-weight:700; margin-bottom:12px}
+.note p{margin:0 0 12px; color:var(--muted)}
+.note p:last-child{margin-bottom:0}
+.note strong{color:var(--ink); font-weight:600}
+
+/* ---------- Day ---------- */
+.day{padding:44px 0; border-bottom:1px solid var(--line)}
+.day-head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:6px}
+.daynum{
+  font-family:var(--mono); font-weight:600; font-size:15px;
+  color:var(--ground); background:var(--accent);
+  padding:3px 9px; border-radius:5px; letter-spacing:.04em;
+}
+.theme{
+  font-family:var(--mono); font-size:11.5px; font-weight:500;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--muted);
+}
+.day h2{font-family:var(--display); font-size:clamp(25px,6vw,31px); font-weight:700; line-height:1.3; margin:8px 0 0}
+.starred{display:inline-block; color:var(--mark); font-size:.62em; vertical-align:.35em; margin-left:6px}
+
+.situation{
+  font-family:var(--display); font-size:20px; line-height:1.62;
+  margin:22px 0 0; padding:18px 20px;
+  background:var(--surface); border-radius:9px; color:var(--ink);
+}
+.situation .q{display:block; margin-top:8px; color:var(--accent); font-weight:700}
+
+.field{margin-top:24px}
+.label{
+  font-family:var(--mono); font-size:11.5px; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--muted); margin-bottom:7px;
+}
+.field p{margin:0}
+
+.guide{
+  margin-top:24px; padding:20px; border:1px solid var(--line);
+  border-radius:10px; background:var(--ground); box-shadow:0 1px 3px var(--shadow);
+}
+.guide .label{color:var(--accent)}
+.script{
+  font-family:var(--display); font-size:18.5px; line-height:1.7;
+  color:var(--ink); margin:0; padding-left:15px;
+  border-left:3px solid var(--accent-soft);
+}
+.script + .script{margin-top:11px}
+.guide .aside{margin:15px 0 0; font-size:15.5px; color:var(--muted); line-height:1.7}
+.guide .aside + .aside{margin-top:9px}
+.warn{
+  margin-top:15px; padding:12px 15px; background:var(--mark-soft);
+  border-radius:8px; font-size:15px; line-height:1.65; color:var(--ink);
+}
+.warn b{color:var(--mark)}
+
+.check{
+  display:flex; align-items:center; gap:11px; margin-top:24px;
+  padding:14px 17px; border:1.5px dashed var(--line); border-radius:9px;
+  cursor:pointer; user-select:none; transition:background .15s,border-color .15s;
+}
+.check:hover{background:var(--surface)}
+.check input{width:21px; height:21px; accent-color:var(--accent); cursor:pointer; flex:none; margin:0}
+.check span{font-size:16px; font-weight:500}
+.check.done{border-style:solid; border-color:var(--accent); background:var(--accent-soft)}
+
+.source{
+  margin-top:16px; font-family:var(--mono); font-size:11.5px;
+  line-height:1.75; color:var(--muted); word-break:keep-all;
+}
+
+/* ---------- 이메일 ---------- */
+.optin{padding:46px 0; border-bottom:1px solid var(--line)}
+.optin h2{font-family:var(--display); font-size:27px; font-weight:700; margin-bottom:10px}
+.optin p{color:var(--muted); margin:0 0 22px}
+form{display:flex; flex-direction:column; gap:11px}
+input[type=email]{
+  font-family:var(--body); font-size:16.5px; padding:14px 16px;
+  border:1.5px solid var(--line); border-radius:9px;
+  background:var(--ground); color:var(--ink); width:100%;
+}
+input[type=email]::placeholder{color:var(--muted)}
+button{
+  font-family:var(--body); font-size:16.5px; font-weight:600;
+  padding:14px 20px; border:none; border-radius:9px;
+  background:var(--accent); color:var(--ground); cursor:pointer;
+  transition:opacity .15s;
+}
+button:hover{opacity:.88}
+.consent{font-size:13.5px; color:var(--muted); line-height:1.6; margin:4px 0 0}
+
+/* ---------- 준비물 ---------- */
+.supplies{padding:44px 0; border-bottom:1px solid var(--line)}
+.supplies h2{font-family:var(--display); font-size:27px; font-weight:700; margin-bottom:10px}
+.supplies > p{color:var(--muted); margin:0 0 20px}
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:9px}
+.item{
+  display:flex; align-items:center; gap:9px; padding:11px 13px;
+  background:var(--surface); border-radius:8px; font-size:15.5px;
+  cursor:pointer; user-select:none;
+}
+.item input{width:17px; height:17px; accent-color:var(--accent); flex:none; margin:0; cursor:pointer}
+.item.done span{color:var(--muted); text-decoration:line-through}
+.tip{margin-top:18px; font-size:14.5px; color:var(--muted); line-height:1.7}
+
+/* ---------- footer ---------- */
+footer{padding:38px 0 60px}
+footer h3{
+  font-family:var(--mono); font-size:11.5px; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:12px;
+}
+.lic{font-size:13px; line-height:1.85; color:var(--muted); margin:0}
+.lic code{font-family:var(--mono); font-size:12px; color:var(--ink)}
+.disclaim{margin-top:18px; font-size:13px; color:var(--muted); line-height:1.75}
+
+@media (max-width:520px){
+  body{font-size:16.5px}
+  .masthead{padding:44px 0 32px}
+  .day{padding:36px 0}
+  .rail{gap:2px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}}
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="kicker">무료 샘플 · 5일</div>
+    <h1>학교 갈 준비 5일</h1>
+    <p class="dek">한글이 아니라 <b>학교에서 살아남는 법</b>을 준비합니다. 하루 5분, 부모가 읽고 아이와 대화하는 활동지입니다.</p>
+    <p class="basis">
+      영국 <b>EYFS 조기학습목표(PSED)</b>와 호주 교육과정 <b>ACARA Foundation Year</b> 성취기준을 근거로 설계하고,
+      <b>2022 개정 교육과정</b>의 입학초기적응활동(창의적 체험활동 34시간) 구조에 맞춰 재구성했습니다.
+    </p>
+  </header>
+
+  <section class="rail-block">
+    <div class="rail" id="rail" aria-hidden="true"></div>
+    <div class="rail-legend">
+      <span><i class="dot"></i>오늘 보시는 5일</span>
+      <span><i class="dot off"></i>나머지 25일</span>
+    </div>
+  </section>
+
+  <section class="note">
+    <h2>왜 하필 이 다섯 개일까요</h2>
+    <p>30일 중 <strong>가장 효과가 확실한 날</strong>만 골랐습니다. 순서대로 5일이 아니라 9·11·17·24·29일차입니다.</p>
+    <p>초등 1학년 담임 교사들이 가장 자주 겪는 사고는 아이가 <strong>능력이 없어서</strong>가 아니라 <strong>말을 못 해서</strong> 생깁니다. 화장실을 못 가는 게 아니라 가고 싶다고 말을 못 하는 것입니다. 그래서 이 프로그램은 "할 수 있게"가 아니라 <strong>"말할 수 있게"</strong>를 목표로 합니다.</p>
+  </section>
+
+  <!-- ===== Day 9 ===== -->
+  <article class="day">
+    <div class="day-head">
+      <span class="daynum">DAY 09</span>
+      <span class="theme">2주차 · 말로 요청하기</span>
+    </div>
+    <h2>"화장실 가고 싶어요"<span class="starred">★</span></h2>
+
+    <p class="situation">수업 중에 화장실이 급해졌어요.
+      <span class="q">참으면 어떻게 될까?</span></p>
+
+    <div class="field">
+      <div class="label">해보기 · 5분</div>
+      <p>손 들고 → 부모가 이름을 부르면 → <strong>"화장실 가고 싶어요"</strong> 말하기. 부모가 선생님 역할을 맡아 <strong>5번</strong> 반복합니다.</p>
+    </div>
+
+    <div class="guide">
+      <div class="label">부모 가이드</div>
+      <p class="script">"수업 중에 화장실 가고 싶다고 말하는 건 하나도 나쁜 게 아니야. 오히려 참는 게 더 안 좋아."</p>
+      <p class="aside">30일 중 <b>가장 중요한 하루</b>입니다. 초1 담임 교사들이 가장 자주 겪는 사고가 여기서 나옵니다.</p>
+      <p class="aside">아이가 부끄러워하면 <b>부모가 먼저 우스꽝스럽게 시범</b>을 보이세요. 웃으면서 하면 부끄러움이 줄어듭니다.</p>
+      <div class="warn"><b>하지 마세요</b> — "학교에서 실수하면 친구들이 놀려" 같은 말. 불안이 실수 확률을 높입니다.</div>
+    </div>
+
+    <label class="check"><input type="checkbox" data-k="d9"><span>5번 연습했어요</span></label>
+    <p class="source">근거 · EYFS Managing Self "going to the toilet" (DfE, OGL v3.0) · ACARA AC9HPFP05 (CC BY 4.0) · 2022 개정 입학초기적응활동</p>
+  </article>
+
+  <!-- ===== Day 11 ===== -->
+  <article class="day">
+    <div class="day-head">
+      <span class="daynum">DAY 11</span>
+      <span class="theme">2주차 · 말로 요청하기</span>
+    </div>
+    <h2>"도와주세요"<span class="starred">★</span></h2>
+
+    <p class="situation">우유갑이 아무리 해도 안 열려요.
+      <span class="q">이럴 땐 뭐라고 할까?</span></p>
+
+    <div class="field">
+      <div class="label">해보기 · 5분</div>
+      <p>일부러 <strong>어려운 것 3가지</strong>를 주세요. 꽉 닫힌 통, 안 열리는 지퍼, 높은 곳의 물건. 아이가 "도와주세요"라고 말하면 그때 도와줍니다.</p>
+    </div>
+
+    <div class="guide">
+      <div class="label">부모 가이드</div>
+      <p class="script">"혼자 못 하는 건 창피한 게 아니야. 그럴 땐 '도와주세요' 하고 말하면 돼. 그게 제일 똑똑한 거야."</p>
+      <p class="aside">많은 아이가 <b>못 하는 걸 숨깁니다.</b> "도움 요청 = 실패"라는 인식을 학교 가기 전에 깨야 합니다.</p>
+      <p class="aside">아이가 요청할 때마다 <b>"잘 말했어"라고 먼저 칭찬</b>하고 도와주세요. 도와주는 것보다 칭찬이 먼저입니다.</p>
+    </div>
+
+    <label class="check"><input type="checkbox" data-k="d11"><span>3번 도움을 요청했어요</span></label>
+    <p class="source">근거 · ACARA AC9HPFP05 "rehearse help-seeking strategies" (CC BY 4.0) · EYFS Managing Self (DfE, OGL v3.0)</p>
+  </article>
+
+  <!-- ===== Day 17 ===== -->
+  <article class="day">
+    <div class="day-head">
+      <span class="daynum">DAY 17</span>
+      <span class="theme">3주차 · 기다림과 순서</span>
+    </div>
+    <h2>"빌려줄래?" 그리고 "싫어"<span class="starred">★</span></h2>
+
+    <p class="situation">친구가 가진 게 갖고 싶어요. 그런데 내 걸 달라는 친구도 있어요.
+      <span class="q">어떻게 말해야 할까?</span></p>
+
+    <div class="field">
+      <div class="label">해보기 · 5분</div>
+      <p><strong>두 가지를 모두</strong> 연습합니다.<br>
+      ① 부모 물건을 "빌려줄래?" 하고 물어본 뒤 허락받고 쓰기<br>
+      ② 부모가 아이 물건을 달라고 할 때 <strong>"싫어, 이건 내 거야"</strong> 라고 말해보기</p>
+    </div>
+
+    <div class="guide">
+      <div class="label">부모 가이드</div>
+      <p class="script">"물어보고 쓰는 거야. 그리고 <b>싫으면 싫다고 말해도 돼.</b>"</p>
+      <p class="aside">두 번째가 훨씬 중요합니다. <b>착한 아이일수록 거절을 못 해서 물건을 다 뺏깁니다.</b> 거절도 배워야 하는 기술입니다.</p>
+      <p class="aside">아이가 "싫어"라고 말하면 <b>"잘 말했어"라고 칭찬</b>해주세요. 평소에 혼나던 말이라 아이가 망설입니다.</p>
+    </div>
+
+    <label class="check"><input type="checkbox" data-k="d17"><span>빌려달라고 했고, 싫다고도 말했어요</span></label>
+    <p class="source">근거 · ACARA AC9HPFP04 "seek, give or deny permission respectfully" (CC BY 4.0) · EYFS Building Relationships (DfE, OGL v3.0)</p>
+  </article>
+
+  <!-- ===== Day 24 ===== -->
+  <article class="day">
+    <div class="day-head">
+      <span class="daynum">DAY 24</span>
+      <span class="theme">4주차 · 하루 운영</span>
+    </div>
+    <h2>급식 시간</h2>
+
+    <p class="situation">식판에 안 좋아하는 반찬이 담겼어요.
+      <span class="q">다 먹어야 할까?</span></p>
+
+    <div class="field">
+      <div class="label">해보기 · 5분</div>
+      <p>집에서 <strong>식판에 담아</strong> 먹어보기. 안 좋아하는 반찬도 <strong>한 입만</strong> 놓아봅니다.</p>
+    </div>
+
+    <div class="guide">
+      <div class="label">부모 가이드</div>
+      <p class="script">"다 먹어야 하는 건 아니야. 근데 <b>'조금만 주세요'</b>라고 말할 수는 있어."</p>
+      <p class="aside">이 한 문장을 가르치는 게 편식 교정보다 훨씬 실용적입니다. <b>급식실에서 아이가 쓸 수 있는 유일한 협상 카드</b>입니다.</p>
+      <p class="aside">편식을 고치려 들지 마세요. 목표는 <b>급식 시간이 무섭지 않게</b> 만드는 것입니다.</p>
+    </div>
+
+    <label class="check"><input type="checkbox" data-k="d24"><span>식판으로 먹고 "조금만 주세요"를 말했어요</span></label>
+    <p class="source">근거 · EYFS Managing Self "healthy food choices" (DfE, OGL v3.0) · 2022 개정 입학초기적응활동</p>
+  </article>
+
+  <!-- ===== Day 29 ===== -->
+  <article class="day">
+    <div class="day-head">
+      <span class="daynum">DAY 29</span>
+      <span class="theme">마무리 · 예행연습</span>
+    </div>
+    <h2>진짜 학교에 가보기</h2>
+
+    <p class="situation">입학할 학교에 직접 가봅니다. 주말에도 운동장은 대개 열려 있습니다.
+      <span class="q">교문은 어디고, 화장실은 어디 있을까?</span></p>
+
+    <div class="field">
+      <div class="label">해보기 · 20분</div>
+      <p>교문에서 교실 건물까지 걸어보기 → 화장실 위치 확인 → 운동장에서 잠깐 놀기.</p>
+    </div>
+
+    <div class="guide">
+      <div class="label">부모 가이드</div>
+      <p class="script">"여기가 네가 다닐 학교야. 저기가 교문, 저기가 화장실."</p>
+      <p class="aside">30일 중 <b>효과가 가장 확실한 하루</b>입니다. 낯선 공간에 대한 불안은 한 번 가보는 것만으로 크게 줄어듭니다.</p>
+      <p class="aside">사진을 몇 장 찍어 오세요. 입학 전까지 가끔 보여주면 익숙해집니다.</p>
+    </div>
+
+    <label class="check"><input type="checkbox" data-k="d29"><span>학교에 가봤고 화장실 위치를 알아요</span></label>
+    <p class="source">근거 · EYFS Managing Self "confident to try new activities" (DfE, OGL v3.0) · ACARA AC9HPFP01 (CC BY 4.0)</p>
+  </article>
+
+  <!-- ===== 이메일 ===== -->
+  <section class="optin">
+    <h2>나머지 25일 받기</h2>
+    <p>1주차 몸의 독립부터 4주차 하루 운영까지, 30일 전체를 무료로 보내드립니다. 하루 한 통씩입니다.</p>
+    <!-- 배포 시: action 을 실제 폼 서비스(구글폼·메일침프·Formspree 등) 주소로 교체하세요. -->
+    <form id="signup" action="#" method="post" novalidate>
+      <input type="email" name="email" placeholder="이메일 주소" autocomplete="email" required aria-label="이메일 주소">
+      <button type="submit">30일 전체 받기</button>
+      <p class="consent">보호자 본인의 이메일만 입력해 주세요. 아이의 이름·생년월일 등 개인정보는 받지 않습니다. 언제든 수신을 해지할 수 있습니다.</p>
+    </form>
+  </section>
+
+  <!-- ===== 준비물 ===== -->
+  <section class="supplies">
+    <h2>입학 준비물 체크리스트</h2>
+    <p>Day 5(내 물건 알아보기)와 Day 6(가방 싸기)에 필요한 것들입니다. 체크하면 저장됩니다.</p>
+    <div class="grid" id="supplies">
+      <!-- 제휴 링크를 붙일 경우: 이 섹션 시작 부분에 대가성 문구를 반드시 표기할 것
+           "이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다." -->
+    </div>
+    <p class="tip"><strong>물통은 아이가 직접 고르게 하세요.</strong> 아이가 못 여는 물통은 학교에서도 못 엽니다. 원터치 버튼형이 빨대형보다 실패가 적습니다.</p>
+  </section>
+
+  <footer>
+    <h3>출처 및 라이선스</h3>
+    <p class="lic">
+      Based on the Australian Curriculum V9 © ACARA, licensed under <code>CC BY 4.0</code>. 원저작자의 승인 또는 후원을 의미하지 않습니다.<br>
+      Contains public sector information licensed under the <code>Open Government Licence v3.0</code>.<br>
+      2022 개정 교육과정, 교육부, https://www.moe.go.kr — <code>공공누리 제1유형</code>
+    </p>
+    <p class="disclaim">
+      본 활동지는 위 교육과정 문서를 참고하여 <strong>독자적으로 재구성</strong>한 것입니다.
+      발행 기관의 인증이나 공인을 받은 자료가 아니며, 특정한 학습 효과를 보장하지 않습니다.
+    </p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // 30일 레일 — 발췌한 5일 표시
+  var picked = [9,11,17,24,29], rail = document.getElementById("rail"), i, t;
+  for(i=1;i<=30;i++){
+    t = document.createElement("i");
+    t.className = "tick" + (picked.indexOf(i)>-1 ? " on" : "");
+    rail.appendChild(t);
+  }
+
+  // 준비물 목록
+  var items = ["책가방","실내화","실내화 주머니","필통","2B 연필 5자루",
+               "지우개","색연필","물통","이름표 스티커","손수건","알림장","가위·풀"];
+  var grid = document.getElementById("supplies"), lab, box, txt;
+  items.forEach(function(name, n){
+    lab = document.createElement("label"); lab.className = "item";
+    box = document.createElement("input"); box.type = "checkbox"; box.setAttribute("data-k","s"+n);
+    txt = document.createElement("span"); txt.textContent = name;
+    lab.appendChild(box); lab.appendChild(txt); grid.appendChild(lab);
+  });
+
+  // 체크 상태 저장 — 이 브라우저에만 남고 외부로 전송되지 않습니다
+  var KEY = "junbi5", state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e){ state = {}; }
+
+  function paint(el){
+    var p = el.closest(".check") || el.closest(".item");
+    if(p) p.classList.toggle("done", el.checked);
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("input[data-k]"), function(el){
+    el.checked = state[el.getAttribute("data-k")] === true;
+    paint(el);
+    el.addEventListener("change", function(){
+      state[el.getAttribute("data-k")] = el.checked;
+      paint(el);
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){}
+    });
+  });
+
+  // 이메일 폼 — 배포 시 action 을 실제 폼 서비스로 교체
+  var form = document.getElementById("signup");
+  form.addEventListener("submit", function(ev){
+    var field = form.querySelector("input[type=email]");
+    if(!field.value || field.value.indexOf("@") < 1){
+      ev.preventDefault();
+      field.focus();
+      return;
+    }
+    if(form.getAttribute("action") === "#"){
+      ev.preventDefault();
+      var btn = form.querySelector("button");
+      btn.textContent = "신청 폼이 아직 연결되지 않았습니다";
+      btn.disabled = true;
+      setTimeout(function(){ btn.textContent = "30일 전체 받기"; btn.disabled = false; }, 2600);
+    }
+  });
+})();
+</script>
